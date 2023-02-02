@@ -239,3 +239,4 @@ C:\Users\n246v\Desktop\C#\CarShop\CarShop\obj\Debug\net6.0\CarShop.genruntimecon
 C:\Users\n246v\Desktop\C#\CarShop\CarShop\obj\Debug\net6.0\ref\CarShop.dll
 C:\Users\n246v\Desktop\C#\CarShop\CarShop\obj\Debug\net6.0\CarShop.RazorAssemblyInfo.cache
 C:\Users\n246v\Desktop\C#\CarShop\CarShop\obj\Debug\net6.0\CarShop.RazorAssemblyInfo.cs
+C:\Users\n246v\Desktop\C#\CarShop\CarShop\bin\Debug\net6.0\CarShop.staticwebassets.runtime.json
