@@ -11,5 +11,5 @@ internal class Program
     }
 
     public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-        WebHost.CreateDefaultBuilder(args).UseStartup<Startap>();
+        WebHost.CreateDefaultBuilder(args).UseStartup<Startup>();
 }
