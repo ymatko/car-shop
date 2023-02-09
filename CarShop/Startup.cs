@@ -1,6 +1,7 @@
 ﻿using CarShop.Data;
 using CarShop.Data.Interfaces;
 using CarShop.Data.Mocks;
+using CarShop.Data.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace CarShop
@@ -15,8 +16,8 @@ namespace CarShop
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDBContent>(options => options.UseSqlServer(_confString.GetConnectionString("DefaultConnection")));
-            services.AddTransient<IAllCars, MockCars>();
-            services.AddTransient<ICarsCategory, MockCategory>();
+            services.AddTransient<IAllCars, CarRepository>();
+            services.AddTransient<ICarsCategory, CategoryRepository>();
             services.AddMvc(option => option.EnableEndpointRouting = false);
         }
 
@@ -26,6 +27,12 @@ namespace CarShop
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
+
+            using (var scope = app.ApplicationServices.CreateScope())
+            {
+                AppDBContent content = scope.ServiceProvider.GetRequiredService<AppDBContent>();
+                DBobjects.Initial(content);
+            }
         }
     }
 }

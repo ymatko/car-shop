@@ -1,6 +1,15 @@
-﻿namespace CarShop.Data.Repository
+﻿using CarShop.Data.Interfaces;
+using CarShop.Data.Models;
+
+namespace CarShop.Data.Repository
 {
-	public class CategoryRepository
+	public class CategoryRepository : ICarsCategory
 	{
+		private readonly AppDBContent appDBContent;
+		public CategoryRepository(AppDBContent appDBContent)
+		{
+			this.appDBContent = appDBContent;
+		}
+		public IEnumerable<Category> AllCategories => appDBContent.Category;
 	}
 }

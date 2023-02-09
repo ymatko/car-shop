@@ -1,18 +1,20 @@
 ﻿using CarShop.Data.Interfaces;
 using CarShop.Data.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CarShop.Data.Repository
 {
 	public class CarRepository : IAllCars
 	{
 		private readonly AppDBContent appDBContent;
-		public IEnumerable<Car> Cars => throw new NotImplementedException();
-
-		public IEnumerable<Car> getFavCars { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-		public Car getObjectCar(int carId)
+		public CarRepository(AppDBContent appDBContent)
 		{
-			throw new NotImplementedException();
+			this.appDBContent = appDBContent;
 		}
+		public IEnumerable<Car> Cars => appDBContent.Car.Include(c => c.Category);
+
+		public IEnumerable<Car> getFavCars => appDBContent.Car.Where(p => p.isFavourite).Include(c => c.Category);
+
+		public Car getObjectCar(int carId) => appDBContent.Car.FirstOrDefault(p => p.id == carId);
 	}
 }
