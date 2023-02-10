@@ -1,6 +1,7 @@
 ﻿using CarShop.Data;
 using CarShop.Data.Interfaces;
 using CarShop.Data.Mocks;
+using CarShop.Data.Models;
 using CarShop.Data.Repository;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,6 +20,12 @@ namespace CarShop
             services.AddTransient<IAllCars, CarRepository>();
             services.AddTransient<ICarsCategory, CategoryRepository>();
             services.AddMvc(option => option.EnableEndpointRouting = false);
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sp => ShopCart.GetCart(sp));
+
+            services.AddMvc();
+            services.AddMemoryCache();
+            services.AddSession();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -26,6 +33,7 @@ namespace CarShop
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
+            app.UseSession();
             app.UseMvcWithDefaultRoute();
 
             using (var scope = app.ApplicationServices.CreateScope())
