@@ -66,7 +66,7 @@ namespace CarShop.Data
                         price = 48000,
                         isFavourite = true,
                         available = true,
-                        Category = Categories["Cars"]
+                        Category = Categories["Fuel cars"]
                     },
                     new Car
                     {
@@ -77,7 +77,7 @@ namespace CarShop.Data
                         price = 65000,
                         isFavourite = true,
                         available = false,
-                        Category = Categories["Cars"]
+                        Category = Categories["Fuel cars"]
                     }
                  );
             }
@@ -93,7 +93,7 @@ namespace CarShop.Data
                     var list = new Category[]
                     {
                         new Category { categoryName = "Electric cars", desc = "Car with electric motor"},
-                        new Category { categoryName = "Cars", desc = "Cars with an internal combustion engine" }
+                        new Category { categoryName = "Fuel cars", desc = "Cars with an internal combustion engine" }
                     };
                     category = new Dictionary<string, Category>();
                     foreach(Category c in list)

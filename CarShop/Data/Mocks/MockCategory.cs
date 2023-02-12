@@ -12,7 +12,7 @@ namespace CarShop.Data.Mocks
                 return new List<Category>
                 {
                     new Category { categoryName = "Electric cars", desc = "Car with electric motor"},
-                    new Category { categoryName = "Cars", desc = "Cars with an internal combustion engine" }
+                    new Category { categoryName = "Fuel cars", desc = "Cars with an internal combustion engine" }
                 };
             }
         }

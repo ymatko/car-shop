@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lt2BJkk+gyeCeUuJwvJJHRHXBtQP2lEm8GSXETV55lg=",
+  "Hash": "JMTYoeuJ8tyrG6FhZ3gLGGdRfyA294tsCOmRXQvVACk=",
   "Source": "CarShop",
   "BasePath": "_content/CarShop",
   "Mode": "Default",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Style.css"
+    },
+    {
+      "Identity": "C:\\Users\\n246v\\Desktop\\C#\\CarShop\\CarShop\\wwwroot\\img\\Chevrolet_Corvette.png",
+      "SourceId": "CarShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\n246v\\Desktop\\C#\\CarShop\\CarShop\\wwwroot\\",
+      "BasePath": "_content/CarShop",
+      "RelativePath": "img/Chevrolet_Corvette.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Chevrolet_Corvette.png"
+    },
+    {
+      "Identity": "C:\\Users\\n246v\\Desktop\\C#\\CarShop\\CarShop\\wwwroot\\img\\Hummer_H2.png",
+      "SourceId": "CarShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\n246v\\Desktop\\C#\\CarShop\\CarShop\\wwwroot\\",
+      "BasePath": "_content/CarShop",
+      "RelativePath": "img/Hummer_H2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Hummer_H2.png"
     },
     {
       "Identity": "C:\\Users\\n246v\\Desktop\\C#\\CarShop\\CarShop\\wwwroot\\img\\jaguar_i-pace.png",
