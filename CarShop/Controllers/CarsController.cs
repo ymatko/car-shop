@@ -37,7 +37,6 @@ namespace CarShop.Controllers
                 {
                     cars = _allCars.Cars.Where(i => i.Category.id == 2).OrderBy(i => i.id);
                 }
-                currCategory = _category;
             }
             var carObj = new CarsListViewModel
             {
